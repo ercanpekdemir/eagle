@@ -1,0 +1,216 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:1957567925643843695",
+      "lastPropertyId": "8:5835466184886111522",
+      "name": "Purchase",
+      "properties": [
+        {
+          "id": "1:1960983440689378588",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5163026196627272001",
+          "name": "date",
+          "type": 9
+        },
+        {
+          "id": "3:4058983036156295904",
+          "name": "productExplanation",
+          "type": 9
+        },
+        {
+          "id": "4:2380650458543358249",
+          "name": "unit",
+          "type": 9
+        },
+        {
+          "id": "5:3133725094855677917",
+          "name": "quantity",
+          "type": 8,
+          "flags": 4
+        },
+        {
+          "id": "6:3218383764220272689",
+          "name": "unitPrice",
+          "type": 8,
+          "flags": 4
+        },
+        {
+          "id": "7:4828918762330836892",
+          "name": "price",
+          "type": 8,
+          "flags": 4
+        },
+        {
+          "id": "8:5835466184886111522",
+          "name": "userId",
+          "indexId": "1:1747633023041749724",
+          "type": 11,
+          "flags": 1548,
+          "relationTarget": "User"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:8384721360018553457",
+      "lastPropertyId": "5:8900330445271837611",
+      "name": "User",
+      "properties": [
+        {
+          "id": "1:6858562432318207620",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3116113585334668975",
+          "name": "name",
+          "indexId": "2:8042889466840956785",
+          "type": 9,
+          "flags": 2080
+        },
+        {
+          "id": "3:5867722876552141889",
+          "name": "tel",
+          "type": 9
+        },
+        {
+          "id": "4:8323782416682106521",
+          "name": "address",
+          "type": 9
+        },
+        {
+          "id": "5:8900330445271837611",
+          "name": "userType",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:5348039230765897945",
+      "lastPropertyId": "6:6550133420870987486",
+      "name": "PaymentTransaction",
+      "properties": [
+        {
+          "id": "1:6991913277906365514",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1951989645456455954",
+          "name": "date",
+          "type": 9
+        },
+        {
+          "id": "3:2117395991270270350",
+          "name": "paymentExplanation",
+          "type": 9
+        },
+        {
+          "id": "4:1079301223897118664",
+          "name": "paymentType",
+          "type": 9
+        },
+        {
+          "id": "5:2079820525156062294",
+          "name": "amount",
+          "type": 8,
+          "flags": 4
+        },
+        {
+          "id": "6:6550133420870987486",
+          "name": "userId",
+          "indexId": "3:3300173535982841124",
+          "type": 11,
+          "flags": 1548,
+          "relationTarget": "User"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:6533768467432585539",
+      "lastPropertyId": "9:4353493683500526684",
+      "name": "Balance",
+      "properties": [
+        {
+          "id": "1:2033210920221200398",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:725198769502296759",
+          "name": "totalPurchase",
+          "type": 8,
+          "flags": 4
+        },
+        {
+          "id": "3:5157523755091520504",
+          "name": "totalCashPayment",
+          "type": 8,
+          "flags": 4
+        },
+        {
+          "id": "4:6138286102441401581",
+          "name": "totalCCPayment",
+          "type": 8,
+          "flags": 4
+        },
+        {
+          "id": "5:6101285098105672381",
+          "name": "totalCEKPayment",
+          "type": 8,
+          "flags": 4
+        },
+        {
+          "id": "6:6866317103455133992",
+          "name": "totalReturnPayment",
+          "type": 8,
+          "flags": 4
+        },
+        {
+          "id": "7:5375868432179043950",
+          "name": "totalTahsilat",
+          "type": 8,
+          "flags": 4
+        },
+        {
+          "id": "8:7203208742142759904",
+          "name": "balance",
+          "type": 8,
+          "flags": 4
+        },
+        {
+          "id": "9:4353493683500526684",
+          "name": "userId",
+          "indexId": "4:5460022633836780563",
+          "type": 11,
+          "flags": 1548,
+          "relationTarget": "User"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "4:6533768467432585539",
+  "lastIndexId": "4:5460022633836780563",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}
