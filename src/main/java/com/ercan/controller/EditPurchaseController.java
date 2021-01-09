@@ -62,7 +62,7 @@ public class EditPurchaseController implements Initializable {
     public void onMouseClickedKaydet(MouseEvent mouseEvent) {
         if(isReadyToSubmit()) {
 
-            purchaseData.setDate(purchase_date.getPromptText());
+            purchaseData.setDate(purchase_date.getEditor().getText());
             purchaseData.setProductExplanation(purchase_expl.getText());
             purchaseData.setUnit(purchase_unit_chose.getSelectionModel().getSelectedItem());
             purchaseData.setQuantity(Double.parseDouble(purchase_quantity.getText()));

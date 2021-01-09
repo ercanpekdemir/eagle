@@ -55,7 +55,7 @@ public class EditPaymentController implements Initializable {
     public void onMouseClickedKaydet(MouseEvent mouseEvent) {
         if(isReadyToSubmit()) {
 
-            paymentData.setDate(payment_date.getPromptText());
+            paymentData.setDate(payment_date.getEditor().getText());
             paymentData.setPaymentExplanation(payment_expl.getText());
             paymentData.setPaymentType(payment_type.getSelectionModel().getSelectedItem());
             paymentData.setAmount(payment_amount.getText());
