@@ -3,7 +3,7 @@
 ### Used APIs
 |API name|API version|
 |--------|-----------|
-|Objectbox|V2.0|
-|OpenJavaFX|V15|
+|Objectbox|2.8.1|
+|OpenJavaFX|15.0.1|
 
 
