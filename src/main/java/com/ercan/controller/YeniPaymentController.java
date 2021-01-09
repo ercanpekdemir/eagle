@@ -46,7 +46,7 @@ public class YeniPaymentController implements Initializable {
 
             sceneController.repo.newPayment(
                     user,
-                    yeni_payment_date.getPromptText(),
+                    yeni_payment_date.getEditor().getText(),
                     yeni_payment_expl.getText(),
                     PaymentType.findType(yeni_payment_type.getValue()),
                     Double.parseDouble(yeni_payment_tutar.getText()));

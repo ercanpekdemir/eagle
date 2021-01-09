@@ -51,7 +51,7 @@ public class YeniPurchaseController implements Initializable {
 
             sceneController.repo.newPurchase(
                     user,
-                    yen_purchase_date.getPromptText(),
+                    yen_purchase_date.getEditor().getText(),
                     yen_purchase_expl.getText(),
                     Unit.findUnit(yen_purchase_unit_choice.getValue()),
                     Double.parseDouble(yen_purchase_quantity.getText()),
