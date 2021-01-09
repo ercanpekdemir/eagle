@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #ccc;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane fx:id="tab_pane" prefHeight="700.0" prefWidth="1200.0">
+        <tabs>
+
+          <Tab closable="false" text="Ana Sayfa">
+              <Pane>
+                  <Label alignment="CENTER" layoutX="157.0" layoutY="107.0" prefHeight="22.0" prefWidth="250.0" text="Müşteri Listesi" textAlignment="CENTER" textFill="#006cb4">
+                      <font>
+                          <Font name="System Bold" size="18.0" />
+                      </font>
+                  </Label>
+                  <TextField fx:id="searc_musteri_input" layoutX="157.0" layoutY="146.0" onKeyPressed="#onKeyPressedMusteri" prefHeight="30.0" prefWidth="250.0" promptText="Müşteri ara" />
+                  <ListView fx:id="searc_musteri_lv" layoutX="157.0" layoutY="173.0" prefHeight="300.0" prefWidth="250.0" />
+
+                  <Label alignment="CENTER" layoutX="776.0" layoutY="107.0" prefHeight="22.0" prefWidth="250.0" text="Firma Listesi" textAlignment="CENTER" textFill="#006cb4">
+                      <font>
+                          <Font name="System Bold" size="18.0" />
+                      </font>
+                  </Label>
+                  <TextField fx:id="searc_firma_input" layoutX="776.0" layoutY="146.0" onKeyPressed="#onKeyPressedFirma" prefHeight="30.0" prefWidth="250.0" promptText="Firma ara" />
+
+                  <ImageView fx:id="logo" fitHeight="100.0" fitWidth="200.0" layoutX="490.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                          <Image url="@../../../../../Downloads/pekdemir.png" />
+                      </image>
+                  </ImageView>
+
+                  <Button fx:id="yeni_musteri" layoutX="457.0" layoutY="159.0" onMouseClicked="#yeniMusteriOnClick" onMousePressed="#yeniMusteriOnMausePressed" onMouseReleased="#yeniMusteriOnMauseReleased" prefHeight="115.0" prefWidth="115.0" style="-fx-background-color: #006cb4;" text="Yeni Müşteri Ekle" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font></Button>
+                  <Button fx:id="yeni_firma" layoutX="614.0" layoutY="159.0" onMouseClicked="#yeniFirmaOnClick" onMousePressed="#yeniFirmaOnMausePressed" onMouseReleased="#yeniFirmaOnMauseReleased" prefHeight="115.0" prefWidth="115.0" style="-fx-background-color: #006cb4;" text="Yeni Firma Ekle" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font></Button>
+                  <ListView fx:id="searc_firma_lv" layoutX="776.0" layoutY="173.0" prefHeight="300.0" prefWidth="250.0" />
+                  <Button fx:id="yeni_musteri1" layoutX="455.0" layoutY="433.0" onMouseClicked="#yedekleOnClick" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #bb2933;" text="Veri Yedekle" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="yeni_firma1" layoutX="614.0" layoutY="433.0" onMouseClicked="#yukleOnClick" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #bb2933;" text="Veri Yükle" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+
+              </Pane>
+
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>

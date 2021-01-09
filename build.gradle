@@ -1,0 +1,50 @@
+buildscript {
+    ext.objectboxVersion = '2.8.1'
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "io.objectbox:objectbox-gradle-plugin:$objectboxVersion"
+    }
+}
+
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+}
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    manifest {
+        attributes(
+                'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+                'Main-Class': 'com.ercan.MainApp'
+        )
+    }
+}
+
+dependencies {
+    implementation "io.objectbox:objectbox-linux:$objectboxVersion"
+    implementation "io.objectbox:objectbox-macos:$objectboxVersion"
+    implementation "io.objectbox:objectbox-windows:$objectboxVersion"
+    //implementation "io.reactivex.rxjava3:rxjava:3.0.8"
+// https://mvnrepository.com/artifact/io.reactivex.rxjava2/rxjavafx
+//    compile group: 'io.reactivex.rxjava2', name: 'rxjavafx', version: '2.2.2'
+}
+
+javafx {
+    version = "15.0.1"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+mainClassName = 'com.ercan.MainApp'
+
+repositories {
+    jcenter()
+}
+
+apply plugin: 'java-library'
+apply plugin: 'io.objectbox'
