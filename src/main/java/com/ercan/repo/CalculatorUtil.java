@@ -18,10 +18,9 @@ public class CalculatorUtil {
 
         balance.totalTahsilat = balance.totalCashPayment
                 + balance.totalCCPayment
-                + balance.totalCEKPayment
-                - balance.totalReturnPayment;
+                + balance.totalCEKPayment;
 
-        balance.balance = balance.totalPurchase - balance.totalTahsilat;
+        balance.balance = balance.totalPurchase - balance.totalTahsilat - balance.totalReturnPayment;
 
         return balance;
     }

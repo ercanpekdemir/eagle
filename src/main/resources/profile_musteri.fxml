@@ -57,7 +57,7 @@
                <Font size="20.0" />
            </font>
        </Label>
-      <TableView fx:id="purchase_table" layoutX="20.0" layoutY="300.0" prefHeight="350.0" prefWidth="700.0">
+      <TableView fx:id="purchase_table" layoutX="20.0" layoutY="300.0" prefHeight="360.0" prefWidth="700.0">
         <columns>
             <TableColumn fx:id="tc_purchase_date" style="-fx-text-fill: #006cb4;" text="Tarih" />
             <TableColumn fx:id="tc_purchase_explanation" style="-fx-text-fill: #006cb4;" text="Ürün Açıklaması" />
@@ -71,14 +71,14 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Pagination fx:id="purchase_pager" layoutX="20.0" layoutY="300.0" prefHeight="350.0" prefWidth="700.0" />
+      <Pagination fx:id="purchase_pager" layoutX="20.0" layoutY="300.0" prefHeight="360.0" prefWidth="700.0" />
 
        <Label layoutX="740.0" layoutY="260.0" prefHeight="30" prefWidth="260.0" text="Müşteriye Yapılan Tahsilatlar" textFill="#006cb4">
            <font>
                <Font size="20.0" />
            </font>
        </Label>
-      <TableView fx:id="payment_table" layoutX="735.0" layoutY="300.0" prefHeight="350.0" prefWidth="450.0">
+      <TableView fx:id="payment_table" layoutX="735.0" layoutY="300.0" prefHeight="360.0" prefWidth="450.0">
          <columns>
             <TableColumn fx:id="tc_payment_date" prefWidth="56.0" style="-fx-text-fill: #006cb4;" text="Tarih" />
             <TableColumn fx:id="tc_payment_explanation" prefWidth="56.0" style="-fx-text-fill: #006cb4;" text="Açıklama" />
@@ -90,7 +90,7 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Pagination fx:id="payment_pager" layoutX="740.0" layoutY="300.0" prefHeight="350.0" prefWidth="450.0" />
+      <Pagination fx:id="payment_pager" layoutX="740.0" layoutY="300.0" prefHeight="360.0" prefWidth="450.0" />
        
       <Line endX="1170.0" layoutX="15.0" layoutY="100.0" startX="5.0" stroke="#006cb4" />
       <Line endX="1170.0" layoutX="15.0" layoutY="240.0" startX="5.0" stroke="#006cb4" />

@@ -66,7 +66,10 @@ public class ProfileFirmaController implements Initializable {
 
     List<PurchaseData> purchaseList;
     List<PaymentTransactionData> paymentList;
-    private static int rowsPerPage = 9;
+    private static int rowsPerPage = 8;
+
+    private int purchaseTableIndex = 0;
+    private int paymentTableIndex = 0;
 
     private SceneController sceneController;
 
@@ -161,6 +164,7 @@ public class ProfileFirmaController implements Initializable {
     }
 
     public Node createPurchasePage(int pageIndex) {
+        purchaseTableIndex = pageIndex * rowsPerPage;
         int fromIndex = pageIndex * rowsPerPage;
         int toIndex = Math.min(fromIndex + rowsPerPage, purchaseList.size());
         purchase_table.setItems(FXCollections.observableArrayList(purchaseList.subList(fromIndex, toIndex).stream().map(PurchaseData::copy).collect(toList())));
@@ -168,6 +172,7 @@ public class ProfileFirmaController implements Initializable {
     }
 
     public Node createPaymentPage(int pageIndex) {
+        paymentTableIndex = pageIndex * rowsPerPage;
         int fromIndex = pageIndex * rowsPerPage;
         int toIndex = Math.min(fromIndex + rowsPerPage, paymentList.size());
         payment_table.setItems(FXCollections.observableArrayList(paymentList.subList(fromIndex, toIndex).stream().map(PaymentTransactionData::copy).collect(toList())));
@@ -180,18 +185,17 @@ public class ProfileFirmaController implements Initializable {
     }
 
     private void addButtonToPaymentTable() {
-        final int[] i = {0};
         Callback<TableColumn<PaymentTransactionData, Void>, TableCell<PaymentTransactionData, Void>> cellFactory = new Callback<>() {
             @Override
             public TableCell<PaymentTransactionData, Void> call(TableColumn<PaymentTransactionData, Void> param) {
 
                 return new TableCell<>() {
-                    private final MyButton btn = new MyButton("Düzenle");
+                    private final Button btn = new Button("Düzenle");
                     {
                         btn.setOnAction((ActionEvent event) -> {
                             try {
-                                int colIndex = ((MyButton)event.getSource()).getIndex()-1;
-                                PaymentTransactionData paymentData = paymentList.get(colIndex);
+                                int rowIndex = getTableRow().getIndex();
+                                PaymentTransactionData paymentData = paymentList.get(rowIndex + paymentTableIndex);
                                 sceneController.addNewTab("/edit_payment.fxml", Naming.FIRMA_PAYMENT_EDIT_TAB,"edit_payment", new EditPaymentController(sceneController, user, paymentData));
                             } catch (IOException e) {
                                 e.printStackTrace();
@@ -206,7 +210,6 @@ public class ProfileFirmaController implements Initializable {
                         if (empty) {
                             setGraphic(null);
                         } else {
-                            btn.setIndex(i[0]++);
                             setGraphic(btn);
                         }
                     }
@@ -219,7 +222,6 @@ public class ProfileFirmaController implements Initializable {
      }
 
     private void addButtonToPurchaseTable() {
-        final int[] i = {0};
         Callback<TableColumn<PurchaseData, Void>, TableCell<PurchaseData, Void>> cellFactory = new Callback<>() {
             @Override
             public TableCell<PurchaseData, Void> call(TableColumn<PurchaseData, Void> param) {
@@ -229,8 +231,8 @@ public class ProfileFirmaController implements Initializable {
                     {
                         btn.setOnAction((ActionEvent event) -> {
                             try {
-                                int rowIndex = ((MyButton)event.getSource()).getIndex()-1;
-                                PurchaseData purchaseData = purchaseList.get(rowIndex);
+                                int rowIndex = getTableRow().getIndex();
+                                PurchaseData purchaseData = purchaseList.get(rowIndex + purchaseTableIndex);
                                 sceneController.addNewTab("/edit_purchase.fxml", Naming.FIRMA_PURCHASE_EDIT_TAB,"edit_purchase", new EditPurchaseController(sceneController, user, purchaseData));
                             } catch (IOException e) {
                                 e.printStackTrace();
@@ -245,7 +247,6 @@ public class ProfileFirmaController implements Initializable {
                         if (empty) {
                             setGraphic(null);
                         } else {
-                            btn.setIndex(i[0]++);
                             setGraphic(btn);
                         }
                     }

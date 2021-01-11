@@ -118,7 +118,7 @@ public class DataSource {
                             double unitPrice) {
 
         String date;
-        if(d == null) {
+        if(d == null || d.equals("")) {
             date = LocalDateTime.now().format(DateTimeFormatter.ofPattern("MM/dd/yyyy"));
         } else {
             date = d;
@@ -188,7 +188,7 @@ public class DataSource {
                            double amount) {
 
         String date;
-        if(d == null) {
+        if(d == null || d.equals("")) {
             date = LocalDateTime.now().format(DateTimeFormatter.ofPattern("MM/dd/yyyy"));
         } else {
             date = d;
