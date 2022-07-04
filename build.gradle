@@ -1,7 +1,7 @@
 buildscript {
-    ext.objectboxVersion = '2.8.1'
+    ext.objectboxVersion = '3.2.0'
     repositories {
-        jcenter()
+        mavenCentral()
     }
     dependencies {
         classpath "io.objectbox:objectbox-gradle-plugin:$objectboxVersion"
@@ -36,7 +36,7 @@ dependencies {
 }
 
 javafx {
-    version = "15.0.1"
+    version = "18.0.1"
     modules = [ 'javafx.controls', 'javafx.fxml' ]
 }
 

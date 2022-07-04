@@ -1,10 +1,6 @@
 package com.ercan.repo;
 
 import com.ercan.entity.*;
-import com.ercan.entity.Balance_;
-import com.ercan.entity.PaymentTransaction_;
-import com.ercan.entity.Purchase_;
-import com.ercan.entity.User_;
 import com.ercan.tabledata.PaymentTransactionData;
 import com.ercan.tabledata.PurchaseData;
 import com.ercan.tabledata.UserData;
@@ -15,7 +11,6 @@ import io.objectbox.query.QueryBuilder;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 import java.util.List;
 
 
@@ -55,20 +50,20 @@ public class DataSource {
 
     public User findUser(String name, UserType userType) {
         return userBox.query()
-                .equal(User_.name, name)
+                .equal(User_.name, name, QueryBuilder.StringOrder.CASE_SENSITIVE)
                 .and()
-                .equal(User_.userType, userType.getType())
+                .equal(User_.userType, userType.getType(), QueryBuilder.StringOrder.CASE_SENSITIVE)
                 .build()
                 .findFirst();
     }
 
     public List<User> searchUser(String key, UserType userType) {
         return userBox.query()
-                .startsWith(User_.name, key)
+                .startsWith(User_.name, key, QueryBuilder.StringOrder.CASE_INSENSITIVE)
                 .or()
-                .contains(User_.name, key)
+                .contains(User_.name, key, QueryBuilder.StringOrder.CASE_INSENSITIVE)
                 .and()
-                .equal(User_.userType, userType.getType())
+                .equal(User_.userType, userType.getType(), QueryBuilder.StringOrder.CASE_INSENSITIVE)
                 .build()
                 .find();
     }

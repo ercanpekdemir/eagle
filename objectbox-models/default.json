@@ -32,27 +32,24 @@
         {
           "id": "5:3133725094855677917",
           "name": "quantity",
-          "type": 8,
-          "flags": 4
+          "type": 8
         },
         {
           "id": "6:3218383764220272689",
           "name": "unitPrice",
-          "type": 8,
-          "flags": 4
+          "type": 8
         },
         {
           "id": "7:4828918762330836892",
           "name": "price",
-          "type": 8,
-          "flags": 4
+          "type": 8
         },
         {
           "id": "8:5835466184886111522",
           "name": "userId",
           "indexId": "1:1747633023041749724",
           "type": 11,
-          "flags": 1548,
+          "flags": 520,
           "relationTarget": "User"
         }
       ],
@@ -123,15 +120,14 @@
         {
           "id": "5:2079820525156062294",
           "name": "amount",
-          "type": 8,
-          "flags": 4
+          "type": 8
         },
         {
           "id": "6:6550133420870987486",
           "name": "userId",
           "indexId": "3:3300173535982841124",
           "type": 11,
-          "flags": 1548,
+          "flags": 520,
           "relationTarget": "User"
         }
       ],
@@ -151,51 +147,44 @@
         {
           "id": "2:725198769502296759",
           "name": "totalPurchase",
-          "type": 8,
-          "flags": 4
+          "type": 8
         },
         {
           "id": "3:5157523755091520504",
           "name": "totalCashPayment",
-          "type": 8,
-          "flags": 4
+          "type": 8
         },
         {
           "id": "4:6138286102441401581",
           "name": "totalCCPayment",
-          "type": 8,
-          "flags": 4
+          "type": 8
         },
         {
           "id": "5:6101285098105672381",
           "name": "totalCEKPayment",
-          "type": 8,
-          "flags": 4
+          "type": 8
         },
         {
           "id": "6:6866317103455133992",
           "name": "totalReturnPayment",
-          "type": 8,
-          "flags": 4
+          "type": 8
         },
         {
           "id": "7:5375868432179043950",
           "name": "totalTahsilat",
-          "type": 8,
-          "flags": 4
+          "type": 8
         },
         {
           "id": "8:7203208742142759904",
           "name": "balance",
-          "type": 8,
-          "flags": 4
+          "type": 8
         },
         {
           "id": "9:4353493683500526684",
           "name": "userId",
           "indexId": "4:5460022633836780563",
           "type": 11,
-          "flags": 1548,
+          "flags": 520,
           "relationTarget": "User"
         }
       ],

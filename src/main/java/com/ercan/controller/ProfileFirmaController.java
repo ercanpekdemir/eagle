@@ -66,7 +66,7 @@ public class ProfileFirmaController implements Initializable {
 
     List<PurchaseData> purchaseList;
     List<PaymentTransactionData> paymentList;
-    private static int rowsPerPage = 8;
+    private static int rowsPerPage = 50;
 
     private int purchaseTableIndex = 0;
     private int paymentTableIndex = 0;
@@ -85,7 +85,6 @@ public class ProfileFirmaController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         initColumns();
-//        dummyData();
 
         List<Purchase> purchases = sceneController.repo.findPurchasesByUser(user);
         purchaseList = purchases
@@ -128,7 +127,7 @@ public class ProfileFirmaController implements Initializable {
         String date = LocalDateTime.now().format(DateTimeFormatter.ofPattern("MM-dd-yyyy"));
 
 
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 150; i++) {
             PaymentTransactionData pt = new PaymentTransactionData(i, date, "bla bla"+i, PaymentType.CASH.getType(), "i");
             PurchaseData pd = new PurchaseData(i, date, "af"+i, "afsg", 4, "5.0", "");
             purchaseList.add(pd);

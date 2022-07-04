@@ -54,8 +54,10 @@ public class EditPaymentController implements Initializable {
 
     public void onMouseClickedKaydet(MouseEvent mouseEvent) {
         if(isReadyToSubmit()) {
-
-            paymentData.setDate(payment_date.getEditor().getText());
+            if(payment_date.getEditor().getText() != null
+                    && !payment_date.getEditor().getText().isEmpty()) {
+                paymentData.setDate(payment_date.getEditor().getText());
+            }
             paymentData.setPaymentExplanation(payment_expl.getText());
             paymentData.setPaymentType(payment_type.getSelectionModel().getSelectedItem());
             paymentData.setAmount(payment_amount.getText());
@@ -80,7 +82,7 @@ public class EditPaymentController implements Initializable {
                                 sceneController.closeTab(Naming.FIRMA_TAB);
                                 sceneController.closeTab(Naming.FIRMA_PAYMENT_EDIT_TAB);
                                 sceneController.addNewTab("/profile_firma.fxml", Naming.FIRMA_TAB,"profile_firma",
-                                        new ProfileMusteriController(
+                                        new ProfileFirmaController(
                                                 sceneController,
                                                 sceneController.repo.findUser(user.name, user.userType)
                                         )

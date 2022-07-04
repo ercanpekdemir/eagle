@@ -67,7 +67,7 @@ public class YeniPaymentController implements Initializable {
                                 sceneController.closeTab(Naming.FIRMA_TAB);
                                 sceneController.closeTab(Naming.FIRMA_NEW_PAYMENT_TAB);
                                 sceneController.addNewTab("/profile_firma.fxml", Naming.FIRMA_TAB,"profile_firma",
-                                        new ProfileMusteriController(
+                                        new ProfileFirmaController(
                                                 sceneController,
                                                 sceneController.repo.findUser(user.name, user.userType)
                                         )

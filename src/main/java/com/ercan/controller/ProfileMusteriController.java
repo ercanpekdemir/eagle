@@ -68,7 +68,7 @@ public class ProfileMusteriController  implements Initializable {
 
     List<PurchaseData> purchaseList;
     List<PaymentTransactionData> paymentList;
-    private static int rowsPerPage = 8;
+    private static int rowsPerPage = 50;
 
     private int purchaseTableIndex = 0;
     private int paymentTableIndex = 0;
@@ -220,7 +220,7 @@ public class ProfileMusteriController  implements Initializable {
         };
 
         tc_payment_edit.setCellFactory(cellFactory);
-        tc_payment_edit.setPrefWidth(20);
+        tc_payment_edit.setPrefWidth(100);
      }
 
     private void addButtonToPurchaseTable() {

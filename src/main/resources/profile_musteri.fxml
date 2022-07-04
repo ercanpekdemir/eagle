@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
@@ -9,55 +8,49 @@
 <AnchorPane fx:id="profile_musteri" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
 
-       <ImageView fitHeight="100.0" fitWidth="200.0" layoutX="985.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-           <image>
-               <Image url="@../../../../../Downloads/pekdemir.png" />
-           </image>
-       </ImageView>
-
-       <Label layoutX="25.0" layoutY="110.0" prefHeight="30" prefWidth="95.0" text="Adı :" textFill="#bb2933">
+       <Label layoutX="25.0" layoutY="70.0" prefHeight="30" prefWidth="95.0" text="Adı :" textFill="#bb2933">
            <font>
                <Font size="20.0" />
            </font>
        </Label>
-       <Label fx:id="musteri_name" layoutX="120.0" layoutY="110.0" prefHeight="30" prefWidth="200" text="hasan ali" textFill="#006cb4">
+       <Label fx:id="musteri_name" layoutX="120.0" layoutY="70.0" prefHeight="30" prefWidth="200" text="hasan ali" textFill="#006cb4">
            <font>
                <Font size="20.0" />
            </font>
        </Label>
 
-       <Label layoutX="25.0" layoutY="145" prefHeight="30" prefWidth="95.0" text="Telefonu :" textFill="#bb2933">
+       <Label layoutX="25.0" layoutY="105.0" prefHeight="30" prefWidth="95.0" text="Telefonu :" textFill="#bb2933">
            <font>
                <Font size="20.0" />
            </font>
        </Label>
-       <Label fx:id="musteri_tel" layoutX="120.0" layoutY="145.0" prefHeight="30" prefWidth="200" text="05367406953" textFill="#006cb4">
+       <Label fx:id="musteri_tel" layoutX="120.0" layoutY="105.0" prefHeight="30" prefWidth="200" text="05367406953" textFill="#006cb4">
            <font>
                <Font size="18.0" />
            </font>
        </Label>
 
-       <Label layoutX="25.0" layoutY="180.0" prefHeight="30" prefWidth="95.0" text="Adresi :" textFill="#bb2933" textOverrun="CLIP" wrapText="true">
+       <Label layoutX="25.0" layoutY="140.0" prefHeight="30" prefWidth="95.0" text="Adresi :" textFill="#bb2933" textOverrun="CLIP" wrapText="true">
            <font>
                <Font size="20.0" />
            </font>
        </Label>
-       <TextArea fx:id="musteri_adres" editable="false" focusTraversable="false" layoutX="120.0" layoutY="180.0" prefHeight="50" prefWidth="250.0" style="-fx-text-fill: #006cb4;" text="05367406953 wefwlefn wlenfwlken lwkenfwenf" wrapText="true">
+       <TextArea fx:id="musteri_adres" editable="false" focusTraversable="false" layoutX="120.0" layoutY="140.0" prefHeight="50" prefWidth="250.0" style="-fx-text-fill: #006cb4;" text="05367406953 wefwlefn wlenfwlken lwkenfwenf" wrapText="true">
            <font>
                <Font size="16.0" />
            </font>
        </TextArea>
 
-       <Button layoutX="378.0" layoutY="103.0" mnemonicParsing="false" onMouseClicked="#onMouseClickedMusteriDuzenle" prefHeight="27.0" prefWidth="120.0" style="-fx-background-color: #006cb4;" text="Düzenle" textFill="WHITE" />
+       <Button layoutX="378.0" layoutY="63.0" mnemonicParsing="false" onMouseClicked="#onMouseClickedMusteriDuzenle" prefHeight="27.0" prefWidth="120.0" style="-fx-background-color: #006cb4;" text="Düzenle" textFill="WHITE" />
 
-       <Button fx:id="musteri_yazdir" layoutX="378.0" layoutY="208.0" mnemonicParsing="false" onMouseClicked="#onClickMusteriYazdir" prefHeight="27.0" prefWidth="120.0" style="-fx-background-color: #006cb4;" text="Yazdır" textFill="WHITE" />
+       <Button fx:id="musteri_yazdir" layoutX="378.0" layoutY="168.0" mnemonicParsing="false" onMouseClicked="#onClickMusteriYazdir" prefHeight="27.0" prefWidth="120.0" style="-fx-background-color: #006cb4;" text="Yazdır" textFill="WHITE" />
 
-       <Label layoutX="20.0" layoutY="260.0" prefHeight="30" prefWidth="250.0" text="Müşteriye Yapılan Satışlar" textFill="#006cb4">
+       <Label layoutX="20.0" layoutY="220.0" prefHeight="30" prefWidth="250.0" text="Müşteriye Yapılan Satışlar" textFill="#006cb4">
            <font>
                <Font size="20.0" />
            </font>
        </Label>
-      <TableView fx:id="purchase_table" layoutX="20.0" layoutY="300.0" prefHeight="360.0" prefWidth="700.0">
+      <TableView fx:id="purchase_table" layoutX="20.0" layoutY="260.0" prefHeight="600.0" prefWidth="600.0">
         <columns>
             <TableColumn fx:id="tc_purchase_date" style="-fx-text-fill: #006cb4;" text="Tarih" />
             <TableColumn fx:id="tc_purchase_explanation" style="-fx-text-fill: #006cb4;" text="Ürün Açıklaması" />
@@ -71,58 +64,58 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Pagination fx:id="purchase_pager" layoutX="20.0" layoutY="300.0" prefHeight="360.0" prefWidth="700.0" />
+      <Pagination fx:id="purchase_pager" layoutX="20.0" layoutY="260.0" prefHeight="600.0" prefWidth="600.0" />
 
-       <Label layoutX="740.0" layoutY="260.0" prefHeight="30" prefWidth="260.0" text="Müşteriye Yapılan Tahsilatlar" textFill="#006cb4">
+       <Label layoutX="740.0" layoutY="220.0" prefHeight="30" prefWidth="260.0" text="Müşteriden Yapılan Tahsilatlar" textFill="#006cb4">
            <font>
                <Font size="20.0" />
            </font>
        </Label>
-      <TableView fx:id="payment_table" layoutX="735.0" layoutY="300.0" prefHeight="360.0" prefWidth="450.0">
+      <TableView fx:id="payment_table" layoutX="640.0" layoutY="260.0" prefHeight="600.0" prefWidth="600.0">
          <columns>
-            <TableColumn fx:id="tc_payment_date" prefWidth="56.0" style="-fx-text-fill: #006cb4;" text="Tarih" />
-            <TableColumn fx:id="tc_payment_explanation" prefWidth="56.0" style="-fx-text-fill: #006cb4;" text="Açıklama" />
-            <TableColumn fx:id="tc_payment_type" prefWidth="56.0" style="-fx-text-fill: #006cb4;" text="T.Tipi" />
-            <TableColumn fx:id="tc_payment_amount" prefWidth="56.0" style="-fx-text-fill: #006cb4;" text="Tutarı" />
-            <TableColumn fx:id="tc_payment_edit" />
+            <TableColumn fx:id="tc_payment_date" prefWidth="100.0" style="-fx-text-fill: #006cb4;" text="Tarih" />
+            <TableColumn fx:id="tc_payment_explanation" prefWidth="200.0" style="-fx-text-fill: #006cb4;" text="Açıklama" />
+            <TableColumn fx:id="tc_payment_type" prefWidth="100.0" style="-fx-text-fill: #006cb4;" text="T.Tipi" />
+            <TableColumn fx:id="tc_payment_amount" prefWidth="100.0" style="-fx-text-fill: #006cb4;" text="Tutarı" />
+            <TableColumn fx:id="tc_payment_edit" prefWidth="100.0" />
          </columns>
          <columnResizePolicy>
-            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            <TableView fx:constant="UNCONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Pagination fx:id="payment_pager" layoutX="740.0" layoutY="300.0" prefHeight="360.0" prefWidth="450.0" />
+      <Pagination fx:id="payment_pager" layoutX="640.0" layoutY="260.0" prefHeight="600.0" prefWidth="600.0" />
        
-      <Line endX="1170.0" layoutX="15.0" layoutY="100.0" startX="5.0" stroke="#006cb4" />
-      <Line endX="1170.0" layoutX="15.0" layoutY="240.0" startX="5.0" stroke="#006cb4" />
-      <Line endX="-100.0" endY="64.5" layoutX="610.0" layoutY="175.0" startX="-100.0" startY="-75.0" stroke="#006cb4" />
-      <Line endX="-100.0" endY="64.5" layoutX="120.0" layoutY="175.0" startX="-100.0" startY="-75.0" stroke="#006cb4" />
-      <Line endX="-100.0" endY="64.5" layoutX="1285.0" layoutY="175.0" startX="-100.0" startY="-75.0" stroke="#006cb4" />
-      <Label layoutX="855.0" layoutY="103.0" prefHeight="30" prefWidth="140.0" text="Satış Toplamı:" textFill="#bb2933">
+      <Line endX="1170.0" layoutX="15.0" layoutY="60.0" startX="5.0" stroke="#006cb4" />
+      <Line endX="1170.0" layoutX="15.0" layoutY="200.0" startX="5.0" stroke="#006cb4" />
+      <Line endX="-100.0" endY="64.5" layoutX="610.0" layoutY="135.0" startX="-100.0" startY="-75.0" stroke="#006cb4" />
+      <Line endX="-100.0" endY="64.5" layoutX="120.0" layoutY="135.0" startX="-100.0" startY="-75.0" stroke="#006cb4" />
+      <Line endX="-100.0" endY="64.5" layoutX="1285.0" layoutY="135.0" startX="-100.0" startY="-75.0" stroke="#006cb4" />
+      <Label layoutX="855.0" layoutY="63.0" prefHeight="30" prefWidth="140.0" text="Satış Toplamı:" textFill="#bb2933">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="519.0" layoutY="138.0" prefHeight="30" prefWidth="140.0" text="Nakit Toplamı:" textFill="#bb2933">
+      <Label layoutX="519.0" layoutY="98.0" prefHeight="30" prefWidth="140.0" text="Nakit Toplamı:" textFill="#bb2933">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="519.0" layoutY="173.0" prefHeight="30" prefWidth="140.0" text="K.Kartı Toplamı:" textFill="#bb2933" textOverrun="CLIP" wrapText="true">
+      <Label layoutX="519.0" layoutY="133.0" prefHeight="30" prefWidth="140.0" text="K.Kartı Toplamı:" textFill="#bb2933" textOverrun="CLIP" wrapText="true">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="musteri_totalCashPayment" layoutX="660.0" layoutY="138.0" prefHeight="30" prefWidth="150.0" text="500" textFill="#006cb4">
+      <Label fx:id="musteri_totalCashPayment" layoutX="660.0" layoutY="98.0" prefHeight="30" prefWidth="150.0" text="500" textFill="#006cb4">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="musteri_totalCCPayment" layoutX="660.0" layoutY="173.0" prefHeight="30" prefWidth="150.0" text="1200" textFill="#006cb4">
+      <Label fx:id="musteri_totalCCPayment" layoutX="660.0" layoutY="133.0" prefHeight="30" prefWidth="150.0" text="1200" textFill="#006cb4">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="musteri_totalPurchase" layoutX="1000.0" layoutY="103.0" prefHeight="30" prefWidth="150.0" text="11500" textFill="#006cb4">
+      <Label fx:id="musteri_totalPurchase" layoutX="1000.0" layoutY="63.0" prefHeight="30" prefWidth="150.0" text="11500" textFill="#006cb4">
          <font>
             <Font size="18.0" />
          </font>
@@ -131,63 +124,63 @@
 
 
 
-       <Label layoutX="519.0" layoutY="208.0" prefHeight="30" prefWidth="140.0" text="Çek Toplamı:" textFill="#bb2933">
+       <Label layoutX="519.0" layoutY="168.0" prefHeight="30" prefWidth="140.0" text="Çek Toplamı:" textFill="#bb2933">
            <font>
                <Font size="20.0" />
            </font>
        </Label>
-       <Label layoutX="519.0" layoutY="103.0" prefHeight="30" prefWidth="140.0" text="İade Toplamı:" textFill="#bb2933">
+       <Label layoutX="519.0" layoutY="63.0" prefHeight="30" prefWidth="140.0" text="İade Toplamı:" textFill="#bb2933">
            <font>
                <Font size="20.0" />
            </font>
        </Label>
-       <Label layoutX="855.0" layoutY="173.0" prefHeight="30" prefWidth="140.0" text="Borç Bakiyesi:" textFill="#bb2933" textOverrun="CLIP" wrapText="true">
+       <Label layoutX="855.0" layoutY="133.0" prefHeight="30" prefWidth="140.0" text="Borç Bakiyesi:" textFill="#bb2933" textOverrun="CLIP" wrapText="true">
            <font>
                <Font size="20.0" />
            </font>
        </Label>
-       <Label fx:id="musteri_totalReturnPayment" layoutX="660.0" layoutY="103.0" prefHeight="30" prefWidth="150.0" text="500" textFill="#006cb4">
+       <Label fx:id="musteri_totalReturnPayment" layoutX="660.0" layoutY="63.0" prefHeight="30" prefWidth="150.0" text="500" textFill="#006cb4">
            <font>
                <Font size="18.0" />
            </font>
        </Label>
-       <Label fx:id="musteri_total_tahsilat" layoutX="1000.0" layoutY="138.0" prefHeight="30" prefWidth="150.0" text="1,000,120.00 TL" textFill="#006cb4">
+       <Label fx:id="musteri_total_tahsilat" layoutX="1000.0" layoutY="98.0" prefHeight="30" prefWidth="150.0" text="1,000,120.00 TL" textFill="#006cb4">
            <font>
                <Font size="18.0" />
            </font>
        </Label>
-       <Label fx:id="musteri_totalCEKPayment" layoutX="660.0" layoutY="208.0" prefHeight="30" prefWidth="150.0" text="11500" textFill="#006cb4">
+       <Label fx:id="musteri_totalCEKPayment" layoutX="660.0" layoutY="168.0" prefHeight="30" prefWidth="150.0" text="11500" textFill="#006cb4">
            <font>
                <Font size="18.0" />
            </font>
        </Label>
-      <Label layoutX="20.0" layoutY="63.0" prefHeight="30" prefWidth="250" text="Müşteri Bilgileri" textFill="#006cb4">
+      <Label layoutX="20.0" layoutY="23.0" prefHeight="30" prefWidth="250" text="Müşteri Bilgileri" textFill="#006cb4">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="510.0" layoutY="63.0" prefHeight="30" prefWidth="250" text="Tahsilat Bilgileri" textFill="#006cb4">
+      <Label layoutX="510.0" layoutY="23.0" prefHeight="30" prefWidth="250" text="Tahsilat Bilgileri" textFill="#006cb4">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Button layoutX="378.0" layoutY="138.0" mnemonicParsing="false" onMouseClicked="#onClickMusteriYeniPurchase" prefHeight="27.0" prefWidth="120.0" style="-fx-background-color: #006cb4;" text="Yeni Satış Ekle" textFill="WHITE">
+      <Button layoutX="378.0" layoutY="98.0" mnemonicParsing="false" onMouseClicked="#onClickMusteriYeniPurchase" prefHeight="27.0" prefWidth="120.0" style="-fx-background-color: #006cb4;" text="Yeni Satış Ekle" textFill="WHITE">
          <font>
             <Font size="13.0" />
          </font>
       </Button>
-      <Button layoutX="378.0" layoutY="173.0" mnemonicParsing="false" onMouseClicked="#onClickMusteriYeniPayment" prefHeight="27.0" prefWidth="120.0" style="-fx-background-color: #006cb4;" text="Yeni Tahsilat Ekle" textFill="WHITE">
+      <Button layoutX="378.0" layoutY="133.0" mnemonicParsing="false" onMouseClicked="#onClickMusteriYeniPayment" prefHeight="27.0" prefWidth="120.0" style="-fx-background-color: #006cb4;" text="Yeni Tahsilat Ekle" textFill="WHITE">
          <font>
             <Font size="13.0" />
          </font>
       </Button>
 
-       <Label layoutX="855.0" layoutY="138.0" prefHeight="30.0" prefWidth="140.0" text="Tahs. Toplamı:" textFill="#bb2933">
+       <Label layoutX="855.0" layoutY="98.0" prefHeight="30.0" prefWidth="140.0" text="Tahs. Toplamı:" textFill="#bb2933">
            <font>
                <Font size="20.0" />
            </font>
        </Label>
-       <Label fx:id="musteri_balance" layoutX="1000.0" layoutY="173.0" prefHeight="30.0" prefWidth="150.0" text="11,132,345 TL" textFill="#006cb4">
+       <Label fx:id="musteri_balance" layoutX="1000.0" layoutY="133.0" prefHeight="30.0" prefWidth="150.0" text="11,132,345 TL" textFill="#006cb4">
            <font>
                <Font size="18.0" />
            </font>

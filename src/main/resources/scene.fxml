@@ -5,9 +5,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #ccc;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <TabPane fx:id="tab_pane" prefHeight="700.0" prefWidth="1200.0">
+<ScrollPane style="-fx-background-color: #ccc;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<!--   <children>-->
+      <TabPane fx:id="tab_pane">
         <tabs>
 
           <Tab closable="false" text="Ana Sayfa">
@@ -58,5 +58,5 @@
           </Tab>
         </tabs>
       </TabPane>
-   </children>
-</Pane>
+<!--   </children>-->
+</ScrollPane>

@@ -62,7 +62,10 @@ public class EditPurchaseController implements Initializable {
     public void onMouseClickedKaydet(MouseEvent mouseEvent) {
         if(isReadyToSubmit()) {
 
-            purchaseData.setDate(purchase_date.getEditor().getText());
+            if(purchase_date.getEditor().getText() != null
+                    && !purchase_date.getEditor().getText().isEmpty()) {
+                purchaseData.setDate(purchase_date.getEditor().getText());
+            }
             purchaseData.setProductExplanation(purchase_expl.getText());
             purchaseData.setUnit(purchase_unit_chose.getSelectionModel().getSelectedItem());
             purchaseData.setQuantity(Double.parseDouble(purchase_quantity.getText()));
@@ -88,7 +91,7 @@ public class EditPurchaseController implements Initializable {
                                 sceneController.closeTab(Naming.FIRMA_TAB);
                                 sceneController.closeTab(Naming.FIRMA_PURCHASE_EDIT_TAB);
                                 sceneController.addNewTab("/profile_firma.fxml", Naming.FIRMA_TAB,"profile_firma",
-                                        new ProfileMusteriController(
+                                        new ProfileFirmaController(
                                                 sceneController,
                                                 sceneController.repo.findUser(user.name, user.userType)
                                         )
