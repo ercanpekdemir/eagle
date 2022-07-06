@@ -68,7 +68,7 @@ public class ProfileMusteriController  implements Initializable {
 
     List<PurchaseData> purchaseList;
     List<PaymentTransactionData> paymentList;
-    private static int rowsPerPage = 50;
+    private static int rowsPerPage = 100;
 
     private int purchaseTableIndex = 0;
     private int paymentTableIndex = 0;
@@ -295,13 +295,7 @@ public class ProfileMusteriController  implements Initializable {
     public void onClickMusteriYazdir(MouseEvent mouseEvent) {
         try {
             printNode(profile_musteri);
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
+        } catch (NoSuchMethodException | InstantiationException | IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
         }
     }
