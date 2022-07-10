@@ -1,7 +1,6 @@
 package com.ercan.controller;
 
 import com.ercan.Naming;
-import com.ercan.entity.Unit;
 import com.ercan.entity.User;
 import com.ercan.entity.UserType;
 import com.ercan.tabledata.PurchaseData;
