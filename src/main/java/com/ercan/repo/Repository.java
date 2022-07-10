@@ -4,6 +4,8 @@ import com.ercan.entity.*;
 import com.ercan.tabledata.PaymentTransactionData;
 import com.ercan.tabledata.PurchaseData;
 import com.ercan.tabledata.UserData;
+import io.objectbox.exception.UniqueViolationException;
+import io.objectbox.query.QueryBuilder;
 
 import java.util.Date;
 import java.util.List;
@@ -81,6 +83,18 @@ public class Repository {
 
     public boolean removePayment(User user, PaymentTransactionData paymentData) {
         return dataSource.removePayment(user, paymentData);
+    }
+
+    public boolean newProduct(String product) {
+        return dataSource.newProduct(product);
+    }
+
+    public boolean removeProduct(String product) {
+        return dataSource.removeProduct(product);
+    }
+
+    public List<Product> getProducts() {
+        return dataSource.getProducts();
     }
 
     public void removeAll() {

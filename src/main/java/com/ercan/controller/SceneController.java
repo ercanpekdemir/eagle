@@ -44,6 +44,7 @@ public class SceneController implements Initializable {
     public TabPane tab_pane;
     public Button yeni_musteri;
     public Button yeni_firma;
+    public Button product_edit;
     public ListView<String> searc_firma_lv;
     public ListView<String> searc_musteri_lv;
     public List<User> searc_firma_list;
@@ -139,6 +140,10 @@ public class SceneController implements Initializable {
         }
     }
 
+    public void productEditOnClick(MouseEvent mouseEvent) throws IOException {
+        addNewTab("/product_edit.fxml", Naming.PRODUCT_TAB, "product_edit", new ProductEditController(this));
+    }
+
     public void yeniMusteriOnMausePressed(MouseEvent mouseEvent) {
         yeni_musteri.setStyle("-fx-background-color: #4AA7B4");
     }
@@ -151,6 +156,13 @@ public class SceneController implements Initializable {
     }
     public void yeniFirmaOnMauseReleased(MouseEvent mouseEvent) {
         yeni_firma.setStyle("-fx-background-color: #006CB4");
+    }
+
+    public void productEditOnMausePressed(MouseEvent mouseEvent) {
+        product_edit.setStyle("-fx-background-color: #4AA7B4");
+    }
+    public void productEditOnMauseReleased(MouseEvent mouseEvent) {
+        product_edit.setStyle("-fx-background-color: #006CB4");
     }
 
     public void addNewTab(String resourceName, String tabName, String rootName, Initializable controller) throws IOException {
@@ -186,7 +198,7 @@ public class SceneController implements Initializable {
                 event.consume();
                 AlertUtil.warningMsg("Firmaya ait düzenleme ya da ekleme sayfaları açık." +
                         "\nÖncelikle bu sayfalarda ki düzenleme ya da ekleme işlemlerini tamamlayınız ya da kapatınız!");
-            } else if(!isMusteriProfileTabSelected() && !isFirmaProfileTabSelected()){
+            } else if(!isMusteriProfileTabSelected() && !isFirmaProfileTabSelected() && !isProductEditTabSelected()){
                 AlertUtil.confirmMsg("Kaydetmeden çıkmak istediğinize emin misiniz?", result -> {
                     if (result.isPresent() && result.get() == ButtonType.OK){
                         // do nothing, close the tab
@@ -219,6 +231,11 @@ public class SceneController implements Initializable {
     private boolean isFirmaProfileTabSelected() {
         String id = tab_pane.getSelectionModel().getSelectedItem().getId();
         return id.equals(Naming.FIRMA_TAB);
+    }
+
+    private boolean isProductEditTabSelected() {
+        String id = tab_pane.getSelectionModel().getSelectedItem().getId();
+        return id.equals(Naming.PRODUCT_TAB);
     }
 
     private boolean isMusteriProfileTabAllowedToClosed() {

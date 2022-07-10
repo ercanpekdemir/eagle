@@ -47,11 +47,16 @@
                         <Font name="System Bold" size="16.0" />
                      </font>
                   </Button>
-                  <Button fx:id="yeni_firma1" layoutX="614.0" layoutY="433.0" onMouseClicked="#yukleOnClick" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #bb2933;" text="Veri Yükle" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                  <Button fx:id="load_db" layoutX="614.0" layoutY="433.0" onMouseClicked="#yukleOnClick" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #bb2933;" text="Veri Yükle" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
                   </Button>
+               <Button fx:id="product_edit" layoutX="458.0" layoutY="291.0" onMouseClicked="#productEditOnClick" onMousePressed="#productEditOnMausePressed" onMouseReleased="#productEditOnMauseReleased" prefHeight="115.0" prefWidth="115.0" style="-fx-background-color: #006cb4;" text="Ürün Düzenle" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true">
+                  <font>
+                     <Font name="System Bold" size="16.0" />
+                  </font>
+               </Button>
 
               </Pane>
 

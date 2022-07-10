@@ -17,5 +17,7 @@ public class Naming {
     public static final String FIRMA_PURCHASE_EDIT_TAB = "Firma Satış Düzenle";
     public static final String FIRMA_PAYMENT_EDIT_TAB = "Firma Tahsilat Düzenle";
 
+    public static final String PRODUCT_TAB = "Ürün Düzenle";
+
     public static String DB_FILE = "/objectbox-ercan-db/data.mdb";
 }

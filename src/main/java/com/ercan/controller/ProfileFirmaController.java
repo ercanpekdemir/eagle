@@ -217,7 +217,7 @@ public class ProfileFirmaController implements Initializable {
         };
 
         tc_payment_edit.setCellFactory(cellFactory);
-        tc_payment_edit.setPrefWidth(20);
+        tc_payment_edit.setPrefWidth(100);
      }
 
     private void addButtonToPurchaseTable() {

@@ -20,12 +20,14 @@ public class DataSource {
     private Box<Purchase> purchaseBox;
     private Box<PaymentTransaction> paymentTransactionBox;
     private Box<Balance> balanceBox;
+    private Box<Product> productBox;
 
     public DataSource(BoxStore boxStore) {
         userBox = boxStore.boxFor(User.class);
         purchaseBox = boxStore.boxFor(Purchase.class);
         paymentTransactionBox = boxStore.boxFor(PaymentTransaction.class);
         balanceBox = boxStore.boxFor(Balance.class);
+        productBox = boxStore.boxFor(Product.class);
     }
 
     public boolean newUser(String name, String tel, String address, UserType userType) {
@@ -241,6 +243,38 @@ public class DataSource {
         }
 
         return ret;
+    }
+
+    public boolean newProduct(String product) {
+        if (product == null || product.isEmpty() || product.trim().isEmpty()) {
+            return false;
+        }
+
+        Product newProduct = new Product();
+        newProduct.productExplanation = product;
+
+        try {
+            productBox.put(newProduct);
+        }catch (UniqueViolationException e){
+            return false;
+        }
+        return true;
+    }
+
+    public boolean removeProduct(String product) {
+        Product toBeRemoved = productBox.query()
+                .equal(Product_.productExplanation, product, QueryBuilder.StringOrder.CASE_SENSITIVE)
+                .build()
+                .findFirst();
+        boolean ret = false;
+        if(toBeRemoved != null) {
+            ret = productBox.remove(toBeRemoved);
+        }
+        return ret;
+    }
+
+    public List<Product> getProducts() {
+        return productBox.getAll();
     }
 
     public void removeAll() {

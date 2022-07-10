@@ -189,10 +189,31 @@
         }
       ],
       "relations": []
+    },
+    {
+      "id": "5:796775940435045789",
+      "lastPropertyId": "2:1901542409412272698",
+      "name": "Product",
+      "properties": [
+        {
+          "id": "1:6661825040737954838",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1901542409412272698",
+          "name": "productExplanation",
+          "indexId": "5:1026118652411400532",
+          "type": 9,
+          "flags": 2080
+        }
+      ],
+      "relations": []
     }
   ],
-  "lastEntityId": "4:6533768467432585539",
-  "lastIndexId": "4:5460022633836780563",
+  "lastEntityId": "5:796775940435045789",
+  "lastIndexId": "5:1026118652411400532",
   "lastRelationId": "0:0",
   "lastSequenceId": "0:0",
   "modelVersion": 5,
