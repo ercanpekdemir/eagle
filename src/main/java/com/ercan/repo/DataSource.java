@@ -277,6 +277,15 @@ public class DataSource {
         return productBox.getAll();
     }
 
+    public Product findProductByName(String product) {
+        return productBox.query()
+                .startsWith(Product_.productExplanation, product, QueryBuilder.StringOrder.CASE_INSENSITIVE)
+                .or()
+                .contains(Product_.productExplanation, product, QueryBuilder.StringOrder.CASE_INSENSITIVE)
+                .build()
+                .findFirst();
+    }
+
     public void removeAll() {
         userBox.removeAll();
         purchaseBox.removeAll();

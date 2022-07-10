@@ -1,6 +1,7 @@
 package com.ercan.controller;
 
 import com.ercan.Naming;
+import com.ercan.entity.Product;
 import com.ercan.entity.Unit;
 import com.ercan.entity.User;
 import com.ercan.entity.UserType;
@@ -44,6 +45,15 @@ public class YeniPurchaseController implements Initializable {
 
         TextFormatter<String> quantity = new TextFormatter<>(filterDouble);
         yen_purchase_quantity.setTextFormatter(quantity);
+
+        yen_purchase_expl.textProperty().addListener((observable, oldValue, newValue) -> {
+            if(newValue.length() > 2) {
+                Product product = sceneController.repo.findProductByName(newValue);
+                if(product != null) {
+                    yen_purchase_expl.setText(product.productExplanation);
+                }
+            }
+        });
     }
 
     public void onMouseClickedKaydet(MouseEvent mouseEvent) {
