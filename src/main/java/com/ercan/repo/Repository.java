@@ -97,7 +97,7 @@ public class Repository {
         return dataSource.getProducts();
     }
 
-    public Product findProductByName(String product) {
+    public List<Product> findProductByName(String product) {
         return dataSource.findProductByName(product);
     }
 

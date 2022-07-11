@@ -13,18 +13,18 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="80.0" layoutY="160.0" prefHeight="30" prefWidth="100" text="Birimi" textFill="#006cb4">
+      <Label layoutX="80.0" layoutY="200.0" prefHeight="30" prefWidth="100" text="Birimi" textFill="#006cb4">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="80.0" layoutY="200.0" prefHeight="30" prefWidth="100" text="Miktarı" textFill="#006cb4">
+      <Label layoutX="80.0" layoutY="240.0" prefHeight="30" prefWidth="100" text="Miktarı" textFill="#006cb4">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
       <TextField fx:id="yen_purchase_expl" layoutX="190.0" layoutY="120.0" prefHeight="27.0" prefWidth="200.0" />
-      <Button layoutX="246.0" layoutY="280.0" mnemonicParsing="false" onMouseClicked="#onMouseClickedKaydet" prefHeight="27.0" prefWidth="144.0" style="-fx-background-color: #006cb4;" text="Kaydet" textFill="WHITE">
+      <Button layoutX="246.0" layoutY="320.0" mnemonicParsing="false" onMouseClicked="#onMouseClickedKaydet" prefHeight="27.0" prefWidth="144.0" style="-fx-background-color: #006cb4;" text="Kaydet" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
@@ -35,20 +35,20 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="yen_purchase_quantity" layoutX="190.0" layoutY="200.0" prefHeight="27.0" prefWidth="200.0" />
-      <Label layoutX="80.0" layoutY="240.0" prefHeight="30" prefWidth="100" text="Birim Fiyatı" textFill="#006cb4">
+      <TextField fx:id="yen_purchase_quantity" layoutX="190.0" layoutY="240.0" prefHeight="27.0" prefWidth="200.0" />
+      <Label layoutX="80.0" layoutY="280.0" prefHeight="30" prefWidth="100" text="Birim Fiyatı" textFill="#006cb4">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="yen_purchase_unit_price" layoutX="190.0" layoutY="240.0" prefHeight="27.0" prefWidth="200.0" />
+      <TextField fx:id="yen_purchase_unit_price" layoutX="190.0" layoutY="280.0" prefHeight="27.0" prefWidth="200.0" />
 
       <Label layoutX="80.0" layoutY="14.0" prefHeight="30" prefWidth="200" text="Yeni Satış Ekle" textFill="#006cb4">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="yen_purchase_unit_choice" layoutX="190.0" layoutY="160.0" prefWidth="200.0">
+      <ChoiceBox fx:id="yen_purchase_unit_choice" layoutX="190.0" layoutY="200.0" prefWidth="200.0">
          <items>
             <FXCollections fx:factory="observableArrayList">
                <String fx:value="ADET" />
@@ -59,6 +59,12 @@
                <String fx:value="METRE" />
                <String fx:value="KILO" />
                <String fx:value="DIGER" />
+            </FXCollections>
+         </items>
+      </ChoiceBox>
+      <ChoiceBox fx:id="yen_purchase_search_result" layoutX="190.0" layoutY="160.0" prefWidth="200.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
             </FXCollections>
          </items>
       </ChoiceBox>

@@ -277,13 +277,13 @@ public class DataSource {
         return productBox.getAll();
     }
 
-    public Product findProductByName(String product) {
+    public List<Product> findProductByName(String product) {
         return productBox.query()
                 .startsWith(Product_.productExplanation, product, QueryBuilder.StringOrder.CASE_INSENSITIVE)
                 .or()
                 .contains(Product_.productExplanation, product, QueryBuilder.StringOrder.CASE_INSENSITIVE)
                 .build()
-                .findFirst();
+                .find();
     }
 
     public void removeAll() {
