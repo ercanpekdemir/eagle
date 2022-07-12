@@ -68,7 +68,7 @@ public class ProfileMusteriController  implements Initializable {
 
     List<PurchaseData> purchaseList;
     List<PaymentTransactionData> paymentList;
-    private static int rowsPerPage = 100;
+    private static int rowsPerPage = 23;
 
     private int purchaseTableIndex = 0;
     private int paymentTableIndex = 0;
